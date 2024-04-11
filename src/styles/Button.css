@@ -1,0 +1,18 @@
+.buttonLoad{
+    display: block;
+    font-family: var(--functionalFont);
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    padding: 12px 24px ;
+    border: 2px solid var(--cor00);
+    border-radius: 25px;
+    margin: 20px auto;
+    background-color: var(--cor01);
+    color: var(--cor02);
+    transition: .2s;
+}
+
+.buttonLoad:hover{
+    background-color: var(--cor00);
+}

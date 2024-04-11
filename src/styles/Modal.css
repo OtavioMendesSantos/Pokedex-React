@@ -1,0 +1,83 @@
+@keyframes slideDown {
+    from {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    padding: 25px;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    background-color: #a3a3a3c0;
+    border-radius: 25px;
+    animation: slideDown 0.4s;
+}
+
+.slideUp{
+    animation: none;
+    animation: slideUp 0.4s;
+}
+
+.modal h1{
+    margin: 0;
+}
+
+.modal button{
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #354E97;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: #02165B 0px 10px 0px 0px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+
+
+    /* padding: 12px 24px; */
+    font-size: 1.2rem;
+    font-family: var(--functionalFont);
+    font-weight: 600;
+    /* background-color: #fff; */
+    /* border: none; */
+    /* border-radius: 25px; */
+    /* cursor: pointer; */
+}
+
+.modal button:hover {
+    box-shadow: #02165B 0px 7px 0px 0px;
+  }
+  
+.modal button:active {
+    background-color: #02165B;
+    /*50, 168, 80*/
+    box-shadow: #02165B 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+}
+
+
+  
