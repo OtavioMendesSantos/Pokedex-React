@@ -13,10 +13,10 @@ const SearchInput = () => {
         return regex.test(str);
     }
 
-    function handleClick(){
+    function validateInput(){
         const input = document.querySelector('.searchInput')    
-        let {value} = input    
-        
+        const {value} = input
+
         if(!!value.trim()){
             if(validateRegex(value)){
                 setPesquisa(value.toLowerCase())
@@ -28,6 +28,16 @@ const SearchInput = () => {
         }
         
         input.value = ''
+    }
+
+    function handleKeyDown(event){
+        if (event.keyCode === 13) {
+            validateInput() 
+        }
+    }
+
+    function handleClick(){
+        validateInput()
     }
 
     React.useEffect(()=>{
@@ -72,7 +82,7 @@ const SearchInput = () => {
     return (
         <>
             <div className='inputContainer'>
-                <input type='text' placeholder='Pesquise um Pokémon por Nome ou ID' className='searchInput'/>
+                <input type='text' placeholder='Pesquise um Pokémon por Nome ou ID' onKeyDown={handleKeyDown} className='searchInput'/>
                 <button onClick={handleClick}><img src={search} alt="" /></button>
             </div>
             {resultado && <Modal dados={resultado} active={modal} setModal={setModal}/>}

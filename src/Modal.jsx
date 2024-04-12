@@ -7,7 +7,6 @@ const Modal = ({dados, active, setModal}) => {
 
     React.useEffect(() => {
         if (animation === 'slideUp') {
-            console.log(animation);
             document.querySelector('.modal').classList.add('slideUp')
             setTimeout(()=>{
                 setAnimation('');
