@@ -42,6 +42,7 @@
 
 .modal h1{
     margin: 0;
+    text-align: center;
 }
 
 .modal button{
@@ -55,16 +56,9 @@
     box-shadow: #02165B 0px 10px 0px 0px;
     color: hsl(0, 0%, 100%);
     cursor: pointer;
-
-
-    /* padding: 12px 24px; */
     font-size: 1.2rem;
     font-family: var(--functionalFont);
     font-weight: 600;
-    /* background-color: #fff; */
-    /* border: none; */
-    /* border-radius: 25px; */
-    /* cursor: pointer; */
 }
 
 .modal button:hover {
@@ -73,11 +67,32 @@
   
 .modal button:active {
     background-color: #02165B;
-    /*50, 168, 80*/
     box-shadow: #02165B 0px 0px 0px 0px;
     transform: translateY(5px);
     transition: 200ms;
 }
 
+/* ----- Media Query ---- */
 
+@media (max-width: 400px) {
+    .modal .cardContainer{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .modal{
+        padding: 20px 0px;
+        margin-bottom: 2rem;
+    }
+    
+    .modal h1{
+        font-size: 1.5rem;
+    }
+    
+    .modal .cardContainer{
+        transform: scale(90%);
+    }
+}
   

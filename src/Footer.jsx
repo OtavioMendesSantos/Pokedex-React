@@ -4,7 +4,7 @@ import './styles/Footer.css'
 const Footer = () => {
   return (
     <footer className='footer'>
-        <p>Desenvolvido por <a href="#">@OtavioMendesSantos</a></p>
+        <p>Desenvolvido por <a href="https://otaviomendessantos.github.io/Sites_Portifolio/index.html" rel='author' target='_blank'>@OtavioMendesSantos</a></p>
     </footer>
   )
 }
